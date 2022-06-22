@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Values.nginx.name }}
+  labels: {{ include "common.labels" . | nindent 6 }}
+spec:
+  selector:
+    matchLabels: {{ include "common.labels" . | nindent 8 }}
+  serviceName: {{ .Values.nginx.service }}
+  replicas: {{ .Values.replicas }}
+  template:
+    metadata:
+      labels: {{ include "common.labels" . | nindent 8 }}
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: {{ .Values.nginx.name }}
+        image: {{ .Values.nginx.image }}
+        ports:
+        - containerPort: {{ .Values.nginx.port }}
+          name: {{ .Values.nginx.name }}
+        
