@@ -1,5 +1,8 @@
 helm:
   parameters:
+  - name: nginx
+    value: image=jacka12/nginx:6
+    forcestring: false
   - name: image.name
     value: jacka12/nginx
     forcestring: true
