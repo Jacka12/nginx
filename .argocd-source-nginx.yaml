@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: dex.image.name
+    value: jacka12/nginx
+    forcestring: true
+  - name: dex.image.tag
+    value: "9"
+    forcestring: true
