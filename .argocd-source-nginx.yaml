@@ -1,8 +1,0 @@
-helm:
-  parameters:
-  - name: nginx.image
-    value: jacka12/nginx
-    forcestring: true
-  - name: nginx.tag
-    value: "9"
-    forcestring: true
