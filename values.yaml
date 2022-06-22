@@ -4,5 +4,5 @@ nginx:
   image: jacka12/nginx:5        
   port: 80 
 
-replicas: 1
+replicas: 4
 
