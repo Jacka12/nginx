@@ -1,8 +1,8 @@
 helm:
   parameters:
-  - name: dex.image.name
+  - name: nginx.image.repository
     value: jacka12/nginx
     forcestring: true
-  - name: dex.image.tag
+  - name: nginx.image.tag
     value: "8"
     forcestring: true
