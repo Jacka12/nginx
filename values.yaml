@@ -1,7 +1,7 @@
 nginx:
   name: nginx
   service: svnginx
-  image: jacka12/nginx:6        
+  image: jacka12/nginx:7        
   port: 80 
 
 replicas: 5
