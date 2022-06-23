@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: {{ .Values.nginx.name }}
-        {{- $v := $.Files.Get ".argocd-source-nginx.yaml" | fromYaml }}
+        {{- $v := $.Files.Get ".argocd-source-nginx1.yaml" | fromYaml }}
         {{- $n := index $v.helm.parameters 0 }}
         {{- $m := index $v.helm.parameters 1 }}
         image: "{{ $n.value  }}:{{ $m.value}}"
