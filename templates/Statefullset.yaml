@@ -16,6 +16,7 @@ spec:
       containers:
       - name: {{ .Values.nginx.name }}
         image: {{ .Values.nginx.image }}
+        imagePullPolicy:"Always"
         ports:
         - containerPort: {{ .Values.nginx.port }}
           name: {{ .Values.nginx.name }}
