@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: {{ .Values.nginx.name }}
-        image: {{ .Values.nginx.image }}
+        image: {{ .Values.nginx.image }}{{ .Files.Get (printf "%s.dex.image.tag" .Values..argocd-source-nginx.yaml) }}
         imagePullPolicy:"Always"
         ports:
         - containerPort: {{ .Values.nginx.port }}
