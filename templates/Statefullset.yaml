@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: {{ .Values.nginx.name }}
   labels: {{ include "common.labels" . | nindent 6 }}
 spec:
   selector:
     matchLabels: {{ include "common.labels" . | nindent 8 }}
-  serviceName: {{ .Values.nginx.service }}
+  #serviceName: {{ .Values.nginx.service }}
   replicas: {{ .Values.replicas }}
   template:
     metadata:
