@@ -4,5 +4,5 @@ helm:
     value: jacka12/nginx
     forcestring: true
   - name: dex.image.tag
-    value: "10"
+    value: "11"
     forcestring: true
